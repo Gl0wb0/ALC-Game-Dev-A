@@ -17,12 +17,7 @@ public class SpawnManager : MonoBehaviour
         //makes it so the animals dont start pouring out
         InvokeRepeating("SpawnRandAnimal", startDelay, spawnInterval);
     }
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
+   
     void SpawnRandAnimal()
     {
         //spawns a animal in a randome range
