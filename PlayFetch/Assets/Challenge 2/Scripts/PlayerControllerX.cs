@@ -6,10 +6,10 @@ public class PlayerControllerX : MonoBehaviour
 {
     public GameObject dogPrefab;
     
-    //sets up the delay form the dogs initial fire
-    private float DogDelay = 1;
+    //sets up the delay from the dogs initial fire
+    private float DogDelay = .5f;
     //sets the start fire rate
-    private float DogFire = 0;
+    private float DogFire = 1.0f;
     
     // Update is called once per frame
     void Update()
