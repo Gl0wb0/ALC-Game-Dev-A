@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
     //makes sure the player is on the ground
     public bool isOnGround = true;
+    public bool GameOver = false; 
     
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,16 @@ public class PlayerController : MonoBehaviour
     //once the box collider hits the floor the player can jump again
     private void OnCollisionEnter(Collision collision)
     {
-        isOnGround = true;
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
+        
+        else if(collision.gameObject.CompareTag("Obstacle"))
+        {
+            GameOver = true;
+            Debug.Log("GAME OVER");
+        }
+        
     }
 }

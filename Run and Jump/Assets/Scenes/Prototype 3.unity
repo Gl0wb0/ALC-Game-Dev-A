@@ -499,7 +499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835818919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45, y: 9.5, z: 4}
+  m_LocalPosition: {x: 46.6, y: 9.5, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -528,8 +528,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 112.79999, y: 18.781641, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 112.79945, y: 18.781641, z: 0.2}
+  m_Center: {x: 0.13353729, y: 0, z: 0}
 --- !u!114 &835818924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,7 +553,7 @@ GameObject:
   - component: {fileID: 1358182767}
   - component: {fileID: 1358182766}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SpawnManager
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -608,6 +608,7 @@ MonoBehaviour:
   jumpForce: 12
   gravityModifier: 1
   isOnGround: 1
+  GameOver: 0
 --- !u!54 &1411620994
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -747,7 +748,7 @@ PrefabInstance:
     - target: {fileID: 2683466785928483857, guid: 9df3ebf6a09c04292aaf766864037a36,
         type: 3}
       propertyPath: m_TagString
-      value: Object
+      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 2683466785928648671, guid: 9df3ebf6a09c04292aaf766864037a36,
         type: 3}
