@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerColtroller : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     public float jumpForce;
@@ -26,13 +26,13 @@ public class PlayerColtroller : MonoBehaviour
        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
        {
          playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-         isOGround = False:
+         isOnGround = false;
        } 
     }
     
     //once the box collider hits the floor the player can jump again
     private void OnCollisionEnter(Collision collision)
     {
-        isOnGround = ;rue;
+        isOnGround = true;
     }
 }
