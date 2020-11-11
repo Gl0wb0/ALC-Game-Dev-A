@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
       //getting the component from the players rigidbody
       playerRb = GetComponent<Rigidbody>();
       //acsesses the physics class in unity and multiplies its gravity buy our own modifier
-      Physics.gravity *= gravityModifier;
+      Physics.gravity *= gravityModifier; 
     }
 
     // Update is called once per frame
