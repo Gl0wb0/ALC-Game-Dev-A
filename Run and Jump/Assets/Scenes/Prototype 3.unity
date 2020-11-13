@@ -224,7 +224,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 7169122e91e1981469b2b6045ddf7963, type: 3}
       propertyPath: m_Name
-      value: SimpleFarmer_Daughter_White
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7169122e91e1981469b2b6045ddf7963, type: 3}
       propertyPath: m_TagString
@@ -272,6 +272,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7169122e91e1981469b2b6045ddf7963, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 7169122e91e1981469b2b6045ddf7963, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -435,7 +439,7 @@ GameObject:
   - component: {fileID: 835818923}
   m_Layer: 9
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -489,8 +493,8 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_MaskInteraction: 2
+  m_SpriteSortPoint: 1
 --- !u!4 &835818921
 Transform:
   m_ObjectHideFlags: 0
@@ -528,8 +532,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 112.79945, y: 18.781641, z: 0.2}
-  m_Center: {x: 0.13353729, y: 0, z: 0}
+  m_Size: {x: 112.90361, y: 18.781641, z: 0.2}
+  m_Center: {x: 0.081459045, y: 0, z: 0}
 --- !u!114 &835818924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,10 +609,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfea41870eb974338878a809265b079e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 12
+  jumpForce: 10
   gravityModifier: 1
   isOnGround: 1
-  GameOver: 0
+  gameOver: 1
 --- !u!54 &1411620994
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -740,6 +744,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2683466784529236966, guid: 9df3ebf6a09c04292aaf766864037a36,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2683466784529236985, guid: 9df3ebf6a09c04292aaf766864037a36,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2683466785928483857, guid: 9df3ebf6a09c04292aaf766864037a36,
         type: 3}
       propertyPath: m_Name
