@@ -16,6 +16,7 @@ public class PlayerControllerX : MonoBehaviour
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
+    public AudioClip bounceSound; 
 
     private bool isLowEnough = true; 
 
@@ -29,7 +30,8 @@ public class PlayerControllerX : MonoBehaviour
 
         // Apply a small upward force at the start of the game
         playerRb.AddForce(Vector3.up * 5, ForceMode.Impulse);
-        
+        playerAudio.PlayOneShot(bounceSound, 1.5f); 
+       
 
     }
 
@@ -43,7 +45,7 @@ public class PlayerControllerX : MonoBehaviour
             playerRb.AddForce(Vector3.up * floatForce);
         }
 
-        if(transform.position.y < 16)
+        if(transform.position.y > 13)
         {
             isLowEnough = false;
         }
@@ -51,7 +53,7 @@ public class PlayerControllerX : MonoBehaviour
         {
             isLowEnough = true;
         }
-        }
+    }
 
 
     private void OnCollisionEnter(Collision other)
@@ -73,6 +75,11 @@ public class PlayerControllerX : MonoBehaviour
             playerAudio.PlayOneShot(moneySound, 1.0f);
             Destroy(other.gameObject);
 
+        }
+
+         else if (other.gameObject.CompareTag("Ground") && !gameOver)
+        {
+            playerRb.AddForce(Vector3.up * 10, ForceMode.Impulse);
         }
 
     }
