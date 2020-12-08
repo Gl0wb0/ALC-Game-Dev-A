@@ -7,12 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     private float Speed = 30; 
     private float NormalSpeed = 30;
-    private float RunSpeed = 40;
-    private float jumpForce = 15; 
+    private float RunSpeed = 60;
+    private float jumpForce = 25; 
+    private float turnSpeed = 60; 
     private Rigidbody playerRb;
     private  float horizontalInput;
     private  float forwardInput;
-    private float turnSpeed = 60; 
     public bool isOnGround = true;
     public bool gameOver = false; 
     public bool isRunning = false;
