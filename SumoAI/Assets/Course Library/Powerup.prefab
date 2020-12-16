@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6919097417250546744}
   - component: {fileID: 6919097417253916084}
   - component: {fileID: 6919097417252488214}
+  - component: {fileID: 3552189628617791380}
   m_Layer: 0
   m_Name: Powerup
   m_TagString: Powerup
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3552189628617791380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6919097417250775208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0855157, y: 0.9388101, z: 0.2885965}
+  m_Center: {x: 0.012775779, y: 0.0102113485, z: -0.023465872}
