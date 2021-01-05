@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Powerup
+  - playerGoal
+  - PlayerGoal
+  - EnemyGoal
+  - smokeParticle
+  - boostDust
   layers:
   - Default
   - TransparentFX
