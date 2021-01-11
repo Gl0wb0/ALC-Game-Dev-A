@@ -16,8 +16,14 @@ public class SpawnManagerX : MonoBehaviour
 
 
     public GameObject player; 
+    public EnemyX enemyScript; 
 
-    // Update is called once per frame
+
+    void Start()
+    {
+        enemyScript = enemyPrefab.GetComponent<EnemyX>(); 
+    }
+
     void Update()
     {
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
@@ -25,18 +31,10 @@ public class SpawnManagerX : MonoBehaviour
         if (enemyCount == 0)
         {
             SpawnEnemyWave(waveCount);
-            waveCount++;
-            
-        }
-         if (waveCount == 1)
-        {
-            enemyScript.speed = 10;
-        }
-        else
-        {
-            enemyScript.speed += 100;
-        }
+           
 
+        }
+        
     }
 
     // Generate random spawn position for powerups and enemy balls
@@ -64,6 +62,8 @@ public class SpawnManagerX : MonoBehaviour
             Instantiate(enemyPrefab, GenerateSpawnPosition(), enemyPrefab.transform.rotation);
         }
 
+         waveCount++;
+         enemyScript.speed += waveCount; 
        
         ResetPlayerPosition(); // put player back at start
 

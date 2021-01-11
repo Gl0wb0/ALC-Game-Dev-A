@@ -282,8 +282,8 @@ GameObject:
   - component: {fileID: 221162288}
   - component: {fileID: 221162289}
   m_Layer: 0
-  m_Name: Spawn Manager
-  m_TagString: Untagged
+  m_Name: spawn Manager
+  m_TagString: spawnManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -321,6 +321,7 @@ MonoBehaviour:
   enemyCount: 0
   waveCount: 1
   player: {fileID: 583048338}
+  enemyScript: {fileID: 0}
 --- !u!1001 &258741155
 PrefabInstance:
   m_ObjectHideFlags: 0
