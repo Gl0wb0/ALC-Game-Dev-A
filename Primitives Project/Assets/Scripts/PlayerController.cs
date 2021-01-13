@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     public bool gameOver = false; 
     public bool isRunning = false;
+     public GameObject Bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +55,11 @@ public class PlayerController : MonoBehaviour
              isRunning = false;
              Speed = NormalSpeed;
         }
+        
+        if(Input.GetKeyDown(KeyCode.Q))
+      {
+        Instantiate(Bullet, transform.position, Bullet.transform.rotation);
+      }
 
        }
    
@@ -65,6 +71,7 @@ public class PlayerController : MonoBehaviour
             isOnGround = true;
         }
     }
-
+  
+  
    
 }

@@ -5,8 +5,8 @@ using UnityEngine;
 public class OutOfBounds : MonoBehaviour
 {
 
-    public float topBounds = 35.05f;
-    public float lowerBounds = -15.0f;
+     public float topBounds = 35.05f;
+     public float lowerBounds = -15.0f;
     
     // Update is called once per frame
     void Update()
